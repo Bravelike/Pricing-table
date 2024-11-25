@@ -1,0 +1,263 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    color: #333;
+    max-width: 1400px;
+    width: 100%;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+  
+ 
+  
+  .pricing-header  {
+    width: 100%;
+    background-image: url(./images/sand-background-image@2x.png);
+    background-size: cover;
+    background-repeat: repeat;
+    background-color: #F8FAFC;
+    padding: 50px;
+    margin: 0 auto;
+  }
+  
+  .pricing-header h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2rems;
+  }
+  .pricing-header p {
+    max-width: 450px;
+    width: 100%;
+    margin:0 auto 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #4D5562;
+  }
+  
+  /* Pricing Cards Layout */
+
+  /* pricing-table section  */
+ .pricing-table {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    margin: 50px 75px;
+ }
+  
+ .pricing-head {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-areas: "free team popular enterprise";
+}
+.plans {
+     padding: 20px;
+
+ }
+ .plans h3 {
+    color: #263FA9;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0;
+ }
+ .plans h1 {
+    color: #121826;
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 10px 0;
+ }
+ .plans p {
+    color: #4D5562;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+ }
+
+ .free {
+    grid-column: 2/3;
+    /* background-color: rgb(0, 255, 255,0.5); */
+ }
+ .popular {
+    background-color: #121826;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+ }
+ .popular h3{
+    background-color: #263FA9;
+    display: inline-block;
+    color: #FFFFFF;
+    border-radius: 20px;
+    padding: 2px 12px;
+ }
+ .popular h1 {
+    color: #F8FAFC;
+    
+ }
+ .popular p{
+    color: #F8FAFC;
+    padding: 0;
+ }
+
+ .column {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-areas: "c1 c2 c3 c4 c5";
+}
+
+.listing {
+    text-align: center;
+}
+.listing p ,.c1 p{
+    border-bottom: 1px solid #E5E7EB;
+    font-size: 1rem;
+    padding: 10px;
+ }
+.listing p:has(img) {
+    font-size: 0px;
+}
+.listing p:has(svg) {
+    font-size: 0px;
+}
+
+.listing h3 {
+    background-color: #FFFFFF;
+    color: #263FA9;
+    font-size: 1rem;
+}
+
+.c4 {
+    background-color: #121826;
+}
+.c4 p {
+    color: #FFFFFF;
+    border-bottom-color: #4D556233;
+}
+.check-icon path {
+    fill: #FFFFFF;
+}
+
+.c1 {
+    background-color: #F8FAFC;
+    border-bottom-left-radius: 20px;
+}
+.c1 p {
+    font-weight: 600;
+}
+.ctn {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-areas: "g-start team-ctn pop enterprise-ctn";
+}
+.g-start {
+    grid-column: 2/3;
+}
+
+h3 {
+    padding: 30px;
+    text-align: center;
+    color: #263FA9;    
+}
+h3 svg {
+    vertical-align: middle;
+    height: 1.7em;
+    width: 1.7em;
+} 
+.pop {
+    background-color: #7C4F1E;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: #FFFFFF;
+}
+.pop .arrow-icon path{
+    fill: #FFFFFF;
+}
+
+.responsive-text {
+    position: relative;
+}
+
+@media (max-width: 1024px) {
+    .pricing-table {
+        max-width: 1024px;
+        width: 100%;
+        margin: 50px 50px;
+    }
+    .c2 {
+        display: none;
+    }
+    .free {
+        display: none;
+    }
+    .g-start {
+        display: none;
+    }
+    .pricing-head {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .column {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .ctn {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .team {
+        grid-column: 2/3;
+    }
+    .team-ctn {
+        grid-column: 2/3;
+    }
+    .plans h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .pricing-table {
+        max-width: 640px;
+        width: 100%;
+        margin: 50px 50px;
+    }
+    .c3 {
+        display: none;
+    }
+    .team {
+        display: none;
+    }
+    .team-ctn {
+        display: none;
+    }
+    .pricing-head {
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr;
+    }
+    .column {
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr;
+    }
+    .ctn {
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr;
+    }
+
+    .c1 {
+        max-width: 200px;
+    }
+    
+    .popular {
+        grid-column:responsive-text
+
+    }
+    .enterprise {
+        grid-column: 2;
+        display: none;
+    }
+}
+
+
