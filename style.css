@@ -1,263 +1,226 @@
-/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-body {
-    font-family: Arial, sans-serif;
-    background-color: #FFFFFF;
-    color: #333;
-    max-width: 1400px;
-    width: 100%;
+  }
+
+  body {
+    display: block;
+    height: 100vh;
     font-family: "Be Vietnam Pro", sans-serif;
-}
-  
- 
-  
-  .pricing-header  {
+  }
+
+  header {
     width: 100%;
-    background-image: url(./images/sand-background-image@2x.png);
-    background-size: cover;
-    background-repeat: repeat;
+    margin: 0 auto;
+    text-align: center;
     background-color: #F8FAFC;
-    padding: 50px;
+    background-image: url(./images/sand-background-image.png);
+    background-repeat: no-repeat;
+    margin-bottom: 60px;
+    border-bottom: 1px solid #4D556233;
+    padding-block: 52px;
+  }
+
+  header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+
+  header p {
+    width: 500px;
+    color: #4D5562;
     margin: 0 auto;
   }
-  
-  .pricing-header h2 {
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 2rems;
-  }
-  .pricing-header p {
-    max-width: 450px;
-    width: 100%;
-    margin:0 auto 20px;
-    font-size: 1rem;
-    text-align: center;
-    color: #4D5562;
-  }
-  
-  /* Pricing Cards Layout */
 
-  /* pricing-table section  */
- .pricing-table {
+  .pricing-table {
     max-width: 1200px;
     width: 100%;
-    display: grid;
-    margin: 50px 75px;
- }
-  
- .pricing-head {
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    grid-template-areas: "free team popular enterprise";
-}
-.plans {
-     padding: 20px;
+    margin: 0 auto;
+  }
 
- }
- .plans h3 {
-    color: #263FA9;
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(5,minmax(100px,1fr));
+    grid-template-areas: ". free-price team-price popular-price enterprise-price"
+    "offer free-section team-section popular-section enterprise-section"
+    ". free-footer team-footer popular-footer enterprise-footer";
+    padding-bottom: 50px;
+  }
+
+  .text-box{
+    text-align: center;
+  }
+
+  img {
+    width: 15px;
+  }
+.price {
+  padding-block: 1.5rem;
+}
+  .price h3{
     font-size: 1rem;
     font-weight: 600;
-    text-align: center;
-    padding: 0;
- }
- .plans h1 {
-    color: #121826;
+    color: #263FA9;
+  }
+  .price h2 {
     font-size: 4rem;
     font-weight: 600;
-    text-align: center;
+    color: #121826;
     margin: 10px 0;
- }
- .plans p {
-    color: #4D5562;
+  }
+  .price p {
     font-size: 1rem;
     font-weight: 400;
-    text-align: center;
- }
+    color: #4D5562;
+    padding-bottom: 30px;
+  }
 
- .free {
-    grid-column: 2/3;
-    /* background-color: rgb(0, 255, 255,0.5); */
- }
- .popular {
-    background-color: #121826;
-    text-align: center;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
- }
- .popular h3{
-    background-color: #263FA9;
-    display: inline-block;
-    color: #FFFFFF;
-    border-radius: 20px;
-    padding: 2px 12px;
- }
- .popular h1 {
-    color: #F8FAFC;
-    
- }
- .popular p{
-    color: #F8FAFC;
-    padding: 0;
- }
+.text-section p{
+  padding: 15px;
+  border-bottom: 1px solid #4D556233;
+}
 
- .column {
+.offer {
+  grid-area: offer;
+  background-color: #F8FAFC;
+  text-align: left;
+  border-radius:  15px 0  0 15px;
+  overflow: clip;
+}
+
+.free-price {
+  grid-area: free-price;
+}
+.free-section {
+  grid-area: free-section;
+}
+.free-footer {
+  grid-area: free-footer;
+}
+
+.team-price {
+  grid-area: team-price;
+}
+.team-section {
+  grid-area: team-section;
+}
+.team-footer {
+  grid-area: team-footer;
+}
+
+.popular-price {
+  grid-area: popular-price;
+  background-color: #121826;
+  border-radius: 15px 15px 0 0;
+}
+.popular-price h3 {
+  margin: 0 auto;
+  background-color: #263FA9;
+  border-radius: 20px;
+  height: fit-content;
+  width: fit-content;
+  padding: 1px 15px;
+ 
+}
+.popular-section {
+  grid-area: popular-section;
+  background-color: #121826;
+}
+.popular-footer {
+  grid-area: popular-footer;
+  background-color: #7C4F1E;
+  border-radius: 0 0 15px 15px;
+}
+.popular-price h3,
+.popular-price p,
+.popular-price h2,
+.popular-section p,
+.popular-footer p {
+  color: #ffffff !important;
+}
+
+
+.enterprise-price {
+  grid-area: enterprise-price;
+}
+.enterprise-section {
+  grid-area: enterprise-section;
+}
+.enterprise-footer {
+  grid-area:enterprise-footer;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 25px ;
+}
+
+.flex p {
+  color: #263FA9;
+  font-weight: 600;
+}
+
+@media (max-width:1024px) {
+
+  .pricing-table {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .grid-container {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
-    grid-template-areas: "c1 c2 c3 c4 c5";
+    grid-template-columns: repeat(4,minmax(100px,1fr));
+    grid-template-areas: ". team-price popular-price enterprise-price"
+    "offer team-section popular-section enterprise-section"
+    ". team-footer popular-footer enterprise-footer";
+    padding: 0 50px 50px 50px;
+  }
+
+  .free-price,
+  .free-section,
+  .free-footer {
+    display: none;
+  }
 }
 
-.listing {
-    text-align: center;
-}
-.listing p ,.c1 p{
-    border-bottom: 1px solid #E5E7EB;
-    font-size: 1rem;
-    padding: 10px;
- }
-.listing p:has(img) {
-    font-size: 0px;
-}
-.listing p:has(svg) {
-    font-size: 0px;
-}
+@media (max-width:640px) {
 
-.listing h3 {
-    background-color: #FFFFFF;
-    color: #263FA9;
-    font-size: 1rem;
-}
+  .pricing-table {
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+  }
 
-.c4 {
-    background-color: #121826;
-}
-.c4 p {
-    color: #FFFFFF;
-    border-bottom-color: #4D556233;
-}
-.check-icon path {
-    fill: #FFFFFF;
-}
+  .grid-container {
+    display: grid;
+    grid-template-columns: 130px repeat(2,1fr);
+    grid-template-areas: ". enterprise-price popular-price"
+    "offer enterprise-section popular-section"
+    ". enterprise-footer popular-footer ";
+    padding: 0 30px 50px 30px;
+  }
 
-.c1 {
-    background-color: #F8FAFC;
-    border-bottom-left-radius: 20px;
-}
-.c1 p {
+  .price h2{
+    font-size: 3rem;
+  }
+  .offer p {
+    padding-left: 0.75rem;
     font-weight: 600;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+  }
+  .team-price,
+  .team-section,
+  .team-footer {
+    display: none;
 }
-.ctn {
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    grid-template-areas: "g-start team-ctn pop enterprise-ctn";
 }
-.g-start {
-    grid-column: 2/3;
-}
-
-h3 {
-    padding: 30px;
-    text-align: center;
-    color: #263FA9;    
-}
-h3 svg {
-    vertical-align: middle;
-    height: 1.7em;
-    width: 1.7em;
-} 
-.pop {
-    background-color: #7C4F1E;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    color: #FFFFFF;
-}
-.pop .arrow-icon path{
-    fill: #FFFFFF;
-}
-
-.responsive-text {
-    position: relative;
-}
-
-@media (max-width: 1024px) {
-    .pricing-table {
-        max-width: 1024px;
-        width: 100%;
-        margin: 50px 50px;
-    }
-    .c2 {
-        display: none;
-    }
-    .free {
-        display: none;
-    }
-    .g-start {
-        display: none;
-    }
-    .pricing-head {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-    .column {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-    .ctn {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-    .team {
-        grid-column: 2/3;
-    }
-    .team-ctn {
-        grid-column: 2/3;
-    }
-    .plans h1 {
-        font-size: 3rem;
-    }
-}
-
-@media (max-width: 640px) {
-    .pricing-table {
-        max-width: 640px;
-        width: 100%;
-        margin: 50px 50px;
-    }
-    .c3 {
-        display: none;
-    }
-    .team {
-        display: none;
-    }
-    .team-ctn {
-        display: none;
-    }
-    .pricing-head {
-        display: grid;
-        grid-template-columns:1fr 1fr 1fr;
-    }
-    .column {
-        display: grid;
-        grid-template-columns:1fr 1fr 1fr;
-    }
-    .ctn {
-        display: grid;
-        grid-template-columns:1fr 1fr 1fr;
-    }
-
-    .c1 {
-        max-width: 200px;
-    }
-    
-    .popular {
-        grid-column:responsive-text
-
-    }
-    .enterprise {
-        grid-column: 2;
-        display: none;
-    }
-}
-
 
